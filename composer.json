@@ -1,0 +1,28 @@
+{
+    "name": "sergic/kdb-parameters-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony KDBParameterBundle",
+    "keywords": ["parameters", "bundle", "database", "session"],
+    "homepage": "http://kwattro.wordpress.com/bundles/kdbparametersbundle/",
+    "authors": [
+        {
+            "name": "Sergey Gerdel",
+            "email": "skif16@ukr.net",
+            "homepage": "http://sergic.me"
+        },
+        {
+            "name": "Christophe Willesmen",
+            "email": "willemsen.christophe@gmail.com",
+            "homepage": "http://christophewillemsen.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.1,<2.3-dev"
+    },
+    "autoload": {
+        "psr-0": { "KDB\\ParametersBundle": "" }
+    },
+    "target-dir": "KDB/ParametersBundle",
+    "minimum-stability": "dev"
+}
