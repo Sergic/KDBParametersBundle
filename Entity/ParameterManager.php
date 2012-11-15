@@ -93,6 +93,11 @@ class ParameterManager extends BaseParameterManager
         return $this->repository->findAll();
     }
 
+    public function findParamById($id)
+    {
+        return $this->repository->findOneBy(array('id' => $id));
+    }
+
     public function findParamByName($name)
     {
         return $this->repository->findOneByName($name);
