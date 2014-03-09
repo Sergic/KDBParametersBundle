@@ -10,8 +10,8 @@ KDB\ParametersBundle\Entity\Parameter:
       
     value:
       type: string
-      length: 50
-    
+      type: text
+
     active:
       type: boolean
       nullable: true

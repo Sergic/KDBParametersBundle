@@ -75,7 +75,8 @@ class ParametersStorage implements ParametersStorageInterface
 
     private function getParameters()
     {
-        $allParameters = $this->container->get('kdb_parameters.manager')->findActiveParams();
+        $cache = $this->container->getParameter('kdb_parameters.cache');
+        $allParameters = $this->container->get('kdb_parameters.manager')->findActiveParams($cache);
         $parameters = array();
         foreach ($allParameters as $v)
         {

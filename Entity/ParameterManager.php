@@ -108,9 +108,19 @@ class ParameterManager extends BaseParameterManager
         return $this->repository->findOneBy(array('active' => 1, 'name' => $name));
     }
 
-    public function findActiveParams()
+    public function findActiveParams($cache = false)
     {
-        return $this->repository->findBy(array('active' => 1));
+        $qb = $this->repository->createQueryBuilder('p');
+        $qb->where(
+                $qb->expr()->eq('p.active', 1)
+            );
+        $q = $qb->getQuery();
+        if ($cache){
+            $q->useResultCache(true);
+            $q->setQueryCacheLifetime(24*3600);
+        }
+
+        return $q->getResult();
     }
 }
 

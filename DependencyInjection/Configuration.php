@@ -48,6 +48,7 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                 ->end()
                 ->scalarNode('class')->isRequired()->cannotBeEmpty()->end()
+                ->scalarNode('cache')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('form_type')->defaultValue('KDB\ParametersBundle\Form\ParameterFormType')->end()
                 ->scalarNode('form_name')->defaultValue('kdb_parameters_param')->end()
                 ->scalarNode('auto_load')->defaultValue(true)->end()
