@@ -4,7 +4,7 @@ parameters:
 services:
   kdb_parameters.entity_manager:
       factory_service: doctrine
-      factory_method: getEntityManager
+      factory_method: getManager
       class: Doctrine\ORM\EntityManager
   
   kdb_parameters.manager:
